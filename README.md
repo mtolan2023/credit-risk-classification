@@ -4,15 +4,9 @@ Module 20 Challenge
 
 ## Overview of the Analysis
 
-This report examines the usefulness of a supervised-learning model for predicting the credit-worthiness of borrowers for peer-to-peer lending. The dataset used contained a variety of borrower data including loan size, interest rate, borrower income, DTI ratio, number of accounts, derogatory marks, total debt and loan status (healthy or at-risk). The model attempt to predict the "loan status" based on the other factors. 
+This report examines the usefulness of a supervised-learning model for predicting the credit-worthiness of borrowers for peer-to-peer lending. The dataset used contained a variety of borrower data including loan size, interest rate, borrower income, DTI, number of accounts, derogatory credit marks, total debt, and loan status (healthy or at-risk). The model attempt to predict the "loan status" based on the other factors. 
 
-The taining dataset includes 77,536 loans, of which 75,036 (93%) were healthy and 2,500 (3%) were unhealthy. We attempt to tackle this imbalanced using our second Machine Learning Model. We are using SciKit Learn via Python for our analysis. We employed a Logistic Regression Model after splitting our loan_status data off from our remaining features (borrower info, loan amount etc.). We then split our data into training and testing sets (for employment and scoring of the model) and evaluated the score of the training data against the testing data. We chose to use a balanced accuracy score to test the accuracy of the model since the data was imbalanced and then used a second model based on random oversampling to balance the 2 loan statuses.
-
-* Explain the purpose of the analysis. DONE
-* Explain what financial information the data was on, and what you needed to predict. DONE
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`). DONE
-* Describe the stages of the machine learning process you went through as part of this analysis. DONE
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method). DONE
+The taining dataset includes 77,536 loans, of which 75,036 (93%) were healthy and 2,500 (3%) were unhealthy. We attempt to tackle this imbalance using our second Machine Learning Model(random oversampling). We are using SciKit Learn via Python for our analysis. We employed a Logistic Regression Model after splitting our "loan status" data off from our remaining features (borrower info, loan amount etc.). We then split our data into training and testing sets (for employment and scoring of the model) and evaluated the score of the training data against the testing data. We chose to use a balanced accuracy score to test the accuracy of the model since the data was imbalanced and then used a second model based on random oversampling to balance the 2 loan statuses. We measured the accuracy, recall and precision of both models, the results of which are below.
 
 ## Results
 
@@ -31,8 +25,5 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+Overall, our random oversampled model performs very well with a balanced accuracy score of 99%. We believe that it would be valuable to implement this model to evaluate credit-worthiness of potential borrowers. While both models did very well to identify healthly loans, the improved recall of the oversampled model achieved 99% success in identifying at-risk borrowers. The precision was 84%, meaning that our model has more of a chance of over-predicting risk to underpredicting risk, which would likely be deemed acceptable/necessary for business. 
 
-If you do not recommend any of the models, please justify your reasoning.
