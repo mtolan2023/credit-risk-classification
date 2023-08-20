@@ -1,4 +1,4 @@
-## Credit Risk Classification
+### Credit Risk Classification
 
 Module 20 Challenge
 
