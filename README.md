@@ -23,5 +23,5 @@ The taining dataset includes 77,536 loans, of which 75,036 (93%) were healthy an
 
 ## Summary
 
-Overall, our random oversampled model performed very well with a balanced accuracy score of 99%. We believe that it would be valuable to implement this model to evaluate credit-worthiness of potential borrowers. While both models did very well to identify healthly loans, the improved recall of the oversampled model achieved 99% success in identifying at-risk borrowers. The precision was 84%, meaning that our model has more of a chance of over-predicting risk to underpredicting risk, which would likely be deemed acceptable/necessary for business. 
+Overall, our random oversampled model performed very well with a balanced accuracy score of 99%. We believe that it would be valuable to implement this model to evaluate credit-worthiness of potential borrowers. While both models did well to identify healthly loans, the improved recall of the oversampled model achieved 99% success in identifying at-risk borrowers. The precision was 84%, meaning that our model has more of a chance of over-predicting risk to underpredicting risk, which would likely be deemed acceptable/necessary for business. 
 
